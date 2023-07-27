@@ -1,9 +1,14 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
+
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders password form', () => {
+  // Arrange
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
+
+  // Act
+  const linkElement = screen.getByText(/reset password/i);
+
+  // Assert
   expect(linkElement).toBeInTheDocument();
 });
